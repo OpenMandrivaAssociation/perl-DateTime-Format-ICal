@@ -1,15 +1,13 @@
 %define upstream_name    DateTime-Format-ICal
-%define upstream_version 0.09
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.09
+Release:	7
 
 Summary:	Parse and format iCal datetime and duration strings
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/DateTime-Format-ICal
-Source0:	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-ICal-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-ICal-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ in RFC 2445. It can be used to parse these formats in order to create the
 appropriate objects.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
